@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Levi Sawatzky | Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f9fc;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 { margin: 0; }
+    header p { margin-top: 0.5rem; }
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem 0;
+    }
+    h2 { border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .card video, .card img, .card iframe {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Levi Sawatzky</h1>
+    <p>Electrical Engineer | RF, Embedded Systems, IoT</p>
+    <p>
+      <a href="mailto:your.email@example.com" style="color: #00aced;">Email</a> •
+      <a href="https://www.linkedin.com/in/YOUR-LINK" style="color: #00aced;">LinkedIn</a> •
+      <a href="https://github.com/YOUR-USERNAME" style="color: #00aced;">GitHub</a>
+    </p>
+  </header>
+
+  <div class="container">
+    <h2>Projects</h2>
+    <div class="projects">
+
+      <!-- Example Project with MP4 -->
+      <div class="card">
+        <h3>Plasma Flame Speaker</h3>
+        <p>A 10 MHz RF amplifier driving a plasma toroid that doubles as a flame-based speaker.</p>
+        <video controls>
+          <source src="assets/plasma_demo.mp4" type="video/mp4">
+          Your browser does not support video.
+        </video>
+        <p><strong>Tech:</strong> RF circuits, Class E amplifier, PCB design</p>
+        <p><a href="https://github.com/YOUR-USERNAME/Plasma_Flame_Radio">View on GitHub</a></p>
+      </div>
+
+      <!-- Example Project with GIF -->
+      <div class="card">
+        <h3>Nixie Tube Clock</h3>
+        <p>Retro-inspired clock running on microcontrollers with hand-wired tubes.</p>
+        <img src="assets/nixie.gif" alt="Nixie Clock Demo">
+        <p><strong>Tech:</strong> AVR, PCB design, vintage hardware</p>
+        <p><a href="https://github.com/YOUR-USERNAME/Nixie_Clock">View on GitHub</a></p>
+      </div>
+
+      <!-- Example Project with YouTube -->
+      <div class="card">
+        <h3>AM Radio Transmitter</h3>
+        <p>100 W+ AM transmitter adapted from the plasma circuit, broadcasting music at 10.12 MHz.</p>
+        <iframe width="100%" height="200" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        <p><strong>Tech:</strong> RF, impedance matching, VNA tuning</p>
+        <p><a href="https://github.com/YOUR-USERNAME/AM_Transmitter">View on GitHub</a></p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Levi Sawatzky | Built with GitHub Pages
+  </footer>
+</body>
+</html>
