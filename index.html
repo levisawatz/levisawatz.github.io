@@ -83,28 +83,7 @@
     }
   </style>
 </head>
-<script>
-  const emailBtn = document.getElementById("emailBtn");
-  const email = emailBtn.dataset.email;
 
-  emailBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    navigator.clipboard.writeText(email).then(() => {
-      emailBtn.textContent = "Copied!";
-      setTimeout(() => {
-        emailBtn.textContent = "Email";
-      }, 1500);
-    });
-  });
-
-  emailBtn.addEventListener("mouseenter", () => {
-    emailBtn.textContent = "Copy";
-  });
-
-  emailBtn.addEventListener("mouseleave", () => {
-    emailBtn.textContent = "Email";
-  });
-</script>
 <body>
 <header>
   <h1>Levi Sawatzky</h1>
@@ -210,5 +189,27 @@
   <footer>
     © 2025 Levi Sawatzky | Built with GitHub Pages
   </footer>
+<script>
+  const emailBtn = document.getElementById("emailBtn");
+  const email = emailBtn.dataset.email;
+
+  emailBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(email).then(() => {
+      emailBtn.textContent = "Copied!";
+      setTimeout(() => {
+        emailBtn.textContent = "Email";
+      }, 1500);
+    });
+  });
+
+  emailBtn.addEventListener("mouseenter", () => {
+    emailBtn.textContent = "Copy";
+  });
+
+  emailBtn.addEventListener("mouseleave", () => {
+    emailBtn.textContent = "Email";
+  });
+</script>
 </body>
 </html>
