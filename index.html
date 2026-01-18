@@ -83,6 +83,28 @@
     }
   </style>
 </head>
+<script>
+  const emailBtn = document.getElementById("emailBtn");
+  const email = emailBtn.dataset.email;
+
+  emailBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    navigator.clipboard.writeText(email).then(() => {
+      emailBtn.textContent = "Copied!";
+      setTimeout(() => {
+        emailBtn.textContent = "Email";
+      }, 1500);
+    });
+  });
+
+  emailBtn.addEventListener("mouseenter", () => {
+    emailBtn.textContent = "Copy";
+  });
+
+  emailBtn.addEventListener("mouseleave", () => {
+    emailBtn.textContent = "Email";
+  });
+</script>
 <body>
 <header>
   <h1>Levi Sawatzky</h1>
@@ -90,7 +112,13 @@
   </p>
   
    <p class="links">
-  <a href="mailto:levisawatz@gmail.com" class="btn" target="_blank" >Email</a>
+  <!-- <a href="mailto:levisawatz@gmail.com" class="btn" target="_blank" >Email</a> -->
+   <a href="#" 
+   class="btn" 
+   id="emailBtn"
+   data-email="levisawatz@gmail.com">
+   Email
+  </a>
   <a href="https://github.com/levisawatz" class="btn" target="_blank">GitHub</a>
   <a href="https://www.linkedin.com/in/levi-sawatzky" class="btn" target="_blank">LinkedIn</a>
 
